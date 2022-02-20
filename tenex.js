@@ -113,7 +113,7 @@ function delay(time) {
 
     });
 
-   
+    console.log('✓ DONE');
     await page.waitForSelector("#thankumessage",{visible: true});
     await page.screenshot({ path: 'tenex.png',fullPage: true });
     await browser.close();

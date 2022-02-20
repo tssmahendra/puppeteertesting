@@ -54,7 +54,6 @@ function delay(time) {
     //   await page.keyboard.press('Enter'),
     await page.waitForNavigation({ waitUntil: 'networkidle0' }),
     // ]);
-    console.log('✓ Login Successfully');
     await page.evaluate(async (page) => {
       var xPathRes = document.evaluate('.//*[@id="allstepsection"]/div[4]/ul/li[2]/a/div', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
       await xPathRes.singleNodeValue.click();
